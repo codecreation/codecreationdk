@@ -133,27 +133,32 @@
             <p>Want to know more? Never hesitate to contact us. You can also write a mail to contact@docit.dk</p>
           </div>
 
-          <form class="col s12" action="https://formspree.io/contact@docit.dk" method="POST">
+          <form class="col s12" name="contact" onsubmit="window.contact(event);">
             <div class="row">
               <div class="input-field col s12">
-                <input id="name" type="text" class="validate" name="name">
+                <input id="name" type="text" class="validate" name="name" required>
                 <label for="name">Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="email">
+                <input id="email" type="email" class="validate" name="email" required>
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea" name="content"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" name="content" required></textarea>
                 <label for="textarea1">Content</label>
               </div>
             </div>
             <div class="center-align">
-              <button type="submit" class="waves-effect waves-light btn black">send</button>
+              <button class="btn waves-effect waves-light black" type="submit">Submit
+                <i class="material-icons right">send</i>
+              </button>
+              <p class="center-align green-text" style="display:none" id="contact-thanks"><strong>Thank you for contacting us. We will get back to you within two days, probably today.</strong></p>
+              <p class="center-align red-text" style="display:none" id="contact-error"><strong>Sorry! An error occured. Please try again, or contact us at contact@docit.dk.</strong></p>
+
             </div>
           </form>
         </div>
@@ -191,5 +196,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>
