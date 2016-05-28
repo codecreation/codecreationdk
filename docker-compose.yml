@@ -1,0 +1,7 @@
+app:
+  build: .
+  container_name: docit.site
+  ports:
+    - "80:80"
+  volumes:
+    - ./site:/data/www
