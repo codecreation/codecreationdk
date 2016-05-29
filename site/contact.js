@@ -1,4 +1,6 @@
 (function($, window) {
+  $(".button-collapse").sideNav();
+
   window.contact = function (event) {
     event.preventDefault();
 

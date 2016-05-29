@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>DocIT.dk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -10,49 +11,116 @@
       strong {
         font-weight: bold;
       }
+
+      nav .button-collapse {
+        margin-left: 10px;
+      }
+      .banner {
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+      }
+      .banner .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+      }
+
+      .banner.header {
+        background-image: url('/banner.png');
+      }
+
+      .banner.address {
+        background-image: url('/address.png');
+      }
+
+      .banner h2 {
+        margin: 0;
+        padding-top: 75px;
+      }
+
+      .footer p {
+        margin: 0;
+        padding: 10px 0;
+      }
+
+      .card-image .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+
+      .freelancers .card-title {
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
     </style>
   </head>
   <body>
-
-    <div class="container">
-      <div class="row">
-        <div class="col s12 center-align">
-          <h2>Doc<strong>IT</strong>.dk</h2>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#freelancers">Freelancers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#freelancers">Freelancers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </nav>
+    </div>
+
+    <div class="banner header">
+      <div class="overlay">
+        <h2 class="center-align white-text">Doc<strong>IT</strong>.dk</h2>
+        <h5 class="center-align white-text">A collaboration of freelancers</h5>
       </div>
     </div>
 
-   <div class="teal darken-4 grey-text text-lighten-2">
-     <br /><br />
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m4 center-align">
-            <i class="medium material-icons">group_work</i>
-            <p><strong>WHO WE ARE</strong></p>
-            <p>We are a united group of freelancers, burning for web and development. We work solo, we work together, and we always help each other out if and when needed.</p>
-          </div>
-          <div class="col s12 m4 center-align">
-            <i class="medium material-icons">work</i>
-            <p><strong>WHAT WE DO</strong></p>
-            <p>Anything and everything related to our beloved world wide web, including designing and developing websites, managing web related projects or any task you need done.</p>
-          </div>
-          <div class="col s12 m4 center-align">
-            <i class="medium material-icons">shuffle</i>
-            <p><strong>WHY WE DIFFER</strong></p>
-            <p>We work for no one, except our customer and our self. Because of this, we never fall short on motivation or cut ends to make them meet. We love what we do.</p>
+    <a name="about"></a>
+
+    <div>
+      <br /><br />
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4 center-align">
+              <i class="medium material-icons">group_work</i>
+              <p><strong>WHO WE ARE</strong></p>
+              <p>We are a united group of freelancers, passionated for web and development. We work solo, we work together, and we always support each other out if and when needed.</p>
+            </div>
+            <div class="col s12 m4 center-align">
+              <i class="medium material-icons">work</i>
+              <p><strong>WHAT WE DO</strong></p>
+              <p>Anything and everything related to our beloved world wide web, including designing and developing websites, managing web related projects or any IT related task you need done.</p>
+            </div>
+            <div class="col s12 m4 center-align">
+              <i class="medium material-icons">shuffle</i>
+              <p><strong>WHY WE DIFFER</strong></p>
+              <p>We work for no one, except our customer and our self. Because of this, we never fall short on motivation or cut ends to make them meet. We love what we do.</p>
+            </div>
           </div>
         </div>
-      </div>
-     <br /><br />
+      <br /><br />
     </div>
 
-    <div class="white">
+    <a name="projects"></a>
+
+    <div class="grey lighten-4">
       <br /><br />
       <div class="container">
         <div class="row">
           <div class="col s12">
             <h3>Projects</h3>
-            <p>Some of the projects we have been working on.</p>
           </div>
         </div>
 
@@ -60,6 +128,7 @@
           <div class="col s12 m6">
             <div class="card small">
               <div class="card-image waves-effect waves-block waves-light">
+                <div class="overlay"></div>
                 <img src="/sikkerarvdk.png">
               </div>
               <div class="card-content">
@@ -79,6 +148,7 @@
           <div class="col s12 m6">
             <div class="card small">
               <div class="card-image waves-effect waves-block waves-light">
+                <div class="overlay"></div>
                 <img src="/thegoodwooddk.png">
               </div>
               <div class="card-content">
@@ -99,7 +169,7 @@
       <br /><br />
     </div>
 
-    <div class="teal darken-4 grey-text text-lighten-2">
+    <div>
       <br /><br />
       <div class="container">
         <div class="row">
@@ -121,6 +191,123 @@
         </div>
       </div>
       <br /><br />
+    </div>
+
+    <a name="freelancers"></a>
+
+    <div class="grey lighten-4 freelancers">
+      <br /><br />
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h3>Freelancers</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="anders.jpg">
+                <span class="card-title">Anders Nysom</span>
+              </div>
+              <div class="card-content">
+                <p>Full stack developer with focus on JavaScript, CSS and .NET.</p>
+                <br />
+                <p class="right-align">
+                  <a href="https://www.linkedin.com/in/anders-nysom-75939546" target="_blank">
+                    <img src="linkedin.png" />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="andreas.jpg">
+                <span class="card-title">Andreas Elmertoft</span>
+              </div>
+              <div class="card-content">
+                <p>Full stack developer with focus on CSS, PHP and dev-ops.</p>
+                <br />
+                <p class="right-align">
+                  <a href="https://www.linkedin.com/in/elmertoft" target="_blank">
+                    <img src="linkedin.png" />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="kristian.jpg">
+                <span class="card-title">Kristian Kaa</span>
+              </div>
+              <div class="card-content">
+                <p>Full stack developer with focus on JavaScript and PHP.</p>
+                <br />
+                <p class="right-align">
+                  <a href="https://dk.linkedin.com/in/kristiankaa" target="_blank">
+                    <img src="linkedin.png" />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="michael.jpg">
+                <span class="card-title">Michael Lauritzen</span>
+              </div>
+              <div class="card-content">
+                <p>Experienced technical project manager, with a great skillset including SCRUM.</p>
+                <br />
+                <p class="right-align">
+                  <a href="https://www.linkedin.com/in/michael-lauritzen-4351a62" target="_blank">
+                    <img src="linkedin.png" />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="mikkel.jpg">
+                <span class="card-title">Mikkel Hempel</span>
+              </div>
+              <div class="card-content">
+                <p>Full stack .NET developer with expirance in software architecture.</p>
+                <br />
+                <p class="right-align">
+                  <a href="https://www.linkedin.com/in/mikkel-h-b7119021" target="_blank">
+                    <img src="linkedin.png" />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <br /><br />
+    </div>
+
+    <a name="contact"></a>
+
+    <div class="banner address">
+      <div class="overlay">
+        <h2 class="center-align white-text">Stay in <strong>touch</strong></h2>
+        <h5 class="center-align white-text">Write us, call us or visit us</h5>
+      </div>
     </div>
 
     <div class="white">
@@ -167,7 +354,7 @@
       <br /><br />
     </div>
 
-    <div class="teal darken-4 grey-text text-lighten-2">
+    <div class="grey lighten-4">
       <br /><br />
       <div class="container">
         <div class="row">
@@ -194,6 +381,13 @@
       <br /><br />
     </div>
 
+    <div class="grey darken-4 white-text footer">
+      <div class="container">
+        <div class="col s12">
+          <p class="center-align">© copyright DocIT.dk</p>
+        </div>
+      </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
