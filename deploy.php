@@ -1,7 +1,7 @@
 <?php
 
 // All Deployer recipes are based on `recipe/common.php`.
-require 'recipe/symfony.php';
+require 'recipe/drupal7.php';
 
 // Define a server for deployment.
 // Let's name it "prod" and use port 22.
