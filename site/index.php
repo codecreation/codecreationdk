@@ -130,9 +130,11 @@
                   </div>
                 </div>
               </div>
-              <div class="page-down trigger-vertical-scroll">
-                <p>Testaviva.dk</p>
-                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+              <div class="page-down-container">
+                <div class="page-down trigger-vertical-scroll">
+                  <p>Testaviva.dk</p>
+                  <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -249,9 +251,11 @@
                   </div>
                 </div>
               </div>
-              <div class="page-down trigger-vertical-scroll">
-                <p>Kontraktmaskinen</p>
-                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+              <div class="page-down-container">
+                <div class="page-down trigger-vertical-scroll">
+                  <p>Kontraktmaskinen</p>
+                  <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -282,9 +286,11 @@
                   </div>
                 </div>
               </div>
-              <div class="page-down trigger-vertical-scroll">
-                <p>Sikkerarv.dk</p>
-                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+              <div class="page-down-container">
+                <div class="page-down trigger-vertical-scroll">
+                  <p>Sikkerarv.dk</p>
+                  <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
               </div>
             </div>
           </div>
