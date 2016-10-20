@@ -1,6 +1,6 @@
 html, body {
   color: white;
-  height: 100%;
+  /*height: 100%;*/
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
@@ -8,14 +8,11 @@ html, body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 0 !important;
+  height: 0 !important;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-}
-
-body.disable-scroll {
-  overflow-y: hidden;
 }
 
 p, label {
@@ -55,10 +52,15 @@ section .page {
   float: left;
 }
 
+section .clear {
+  clear: both;
+}
+
 .page {
-  width:100%;
-  height:100%;
-  overflow:hidden;
+  width: 100%;
+  min-height: 100%;
+  /*height: 100%;
+  overflow: hidden;*/
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -67,13 +69,14 @@ section .page {
 
 .page-inner {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  /*height: 100%;*/
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, .3);
 }
 
 .page-content {
   background-color: rgba(0, 0, 0, .4);
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -87,7 +90,7 @@ section .page {
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   animation: jump 4s infinite;
 }
@@ -108,13 +111,13 @@ section .page {
   100% { bottom: 20px;}
 }
 
-#responsive-menu {
-  width: calc(100% + 20px);
-  background-color: rgba(0,0,0,.7);
-  margin: 11px -10px 0 -10px;
-}
-
 @media screen and (max-width: 39.9375em) {
+  #responsive-menu {
+    width: calc(100% + 20px);
+    background-color: rgba(0,0,0,.7);
+    margin: 11px -10px 0 -10px;
+  }
+
   header .menu {
     flex-direction: column;
   }
@@ -122,4 +125,17 @@ section .page {
   .page-content {
     margin-top: 70px;
   }
+}
+
+textarea {
+  min-height: 100px;
+}
+
+section[data-level] {
+  display: none;
+  overflow: hidden;
+}
+
+section[data-level="0"] {
+  display: block;
 }

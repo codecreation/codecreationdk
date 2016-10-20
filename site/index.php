@@ -24,19 +24,19 @@
         <div id="responsive-menu">
           <div class="top-bar-right">
             <ul class="menu">
-              <li><a name="about" class="top-bar-link top-bar-link-active" href="#"><?= $companyName; ?></a></li>
-              <li><a name="technologies" class="top-bar-link" href="#">Teknologier</a></li>
-              <li><a name="projects" class="top-bar-link" href="#">Projekter</a></li>
-              <li><a name="customers" class="top-bar-link" href="#">Kunder</a></li>
-              <li><a name="contact" class="top-bar-link" href="#">Kontakt</a></li>
+              <li><a data-page="0" class="top-bar-link" href="#"><?= $companyName; ?></a></li>
+              <li><a data-page="1" class="top-bar-link" href="#">Teknologier</a></li>
+              <li><a data-page="2" class="top-bar-link" href="#">Projekter</a></li>
+              <li><a data-page="3" class="top-bar-link" href="#">Kunder</a></li>
+              <li><a data-page="4" class="top-bar-link" href="#">Kontakt</a></li>
             </ul>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="level1">
-      <div data-name="about" class="page" style="background-image:url('bg-about.jpg');">
+    <section data-level="0" class="level">
+      <div data-page="0" class="page" style="background-image:url('bg-about.jpg');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div data-name="technologies" class="page" style="background-image:url('bg-technologies.png');">
+      <div data-page="1" class="page" style="background-image:url('bg-technologies.png');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -118,7 +118,7 @@
         </div>
       </div>
 
-      <div data-name="projects" class="page" style="background-image:url('bg-projects.jpg');">
+      <div data-page="2" class="page" style="background-image:url('bg-projects.jpg');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-      <div data-name="customers" class="page" style="background-image:url('bg-customers.jpg');">
+      <div data-page="3" class="page" style="background-image:url('bg-customers.jpg');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -181,10 +181,23 @@
         </div>
       </div>
 
-      <div data-name="contact" class="page" style="background-image:url('bg-contact.png');">
+      <div data-page="4" class="page" style="background-image:url('bg-contact.png');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
+
+              <div class="page-content">
+                <h3>Besøg os</h3>
+                <p>Du er altid velkommen forbi til en kop kaffe, te, en øl eller bare et glas vand :)</p>
+                <p>
+                  <strong>DocIT IVS</strong>
+                  <br />
+                  Kristen Bernikows gade 6, 5 sal
+                  <br />
+                  1105 København K
+                </p>
+              </div>
+
               <div class="page-content">
                 <h3>Kontakt</h3>
                 <div class="row">
@@ -200,37 +213,26 @@
                         <textarea id="textarea1" class="materialize-textarea" name="content" required></textarea>
                       </label>
 
-                      <button class="button success" type="submit">Submit</button>
+                      <button class="button" type="submit">Submit</button>
                     </form>
                   </div>
                 </div>
               </div>
 
-              <div class="page-content">
-                <h3>Besøg os</h3>
-                <p>You are always welcome to swing by for a coffee, tea, beer or just a cup of water :)</p>
-                <p>
-                  <strong>DocIT IVS</strong>
-                  <br />
-                  Kristen Bernikows gade 6, 5 sal
-                  <br />
-                  1105 København K
-                </p>
-              </div>
+
 
             </div>
           </div>
         </div>
       </div>
+      <div class="clear"></div>
     </section>
 
 
-    <section id="level2">
-      <div data-name="about" class="page"><!-- About does not have any vertical children. --></div>
-
-      <div data-name="technologies" class="page"><!-- Technologies does not have any vertical children. --></div>
-
-      <div data-name="projects" class="page" style="background-image:url('projects/project-testaviva.png');">
+    <section data-level="1" class="level">
+      <div data-page="0" class="page"><!-- About does not have any vertical children. --></div>
+      <div data-page="1" class="page"><!-- Technologies does not have any vertical children. --></div>
+      <div data-page="2" class="page" style="background-image:url('projects/project-testaviva.png');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -255,18 +257,15 @@
           </div>
         </div>
       </div>
-
-      <div data-name="customers" class="page"><!-- Customers does not have any vertical children. --></div>
-
-      <div data-name="contact" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div data-page="3" class="page"><!-- Customers does not have any vertical children. --></div>
+      <div data-page="4" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div class="clear"></div>
     </section>
 
-    <section id="level3">
-      <div data-name="about" class="page"><!-- About does not have any vertical children. --></div>
-
-      <div data-name="technologies" class="page"><!-- Technologies does not have any vertical children. --></div>
-
-      <div data-name="projects" class="page" style="background-image:url('projects/project-kontraktmaskinen.png');">
+    <section data-level="2" class="level">
+      <div data-page="0" class="page"><!-- About does not have any vertical children. --></div>
+      <div data-page="1" class="page"><!-- Technologies does not have any vertical children. --></div>
+      <div data-page="2" class="page" style="background-image:url('projects/project-kontraktmaskinen.png');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -291,18 +290,15 @@
           </div>
         </div>
       </div>
-
-      <div data-name="customers" class="page"><!-- Customers does not have any vertical children. --></div>
-
-      <div data-name="contact" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div data-page="3" class="page"><!-- Customers does not have any vertical children. --></div>
+      <div data-page="4" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div class="clear"></div>
     </section>
 
-    <section id="level3">
-      <div data-name="about" class="page"><!-- About does not have any vertical children. --></div>
-
-      <div data-name="technologies" class="page"><!-- Technologies does not have any vertical children. --></div>
-
-      <div data-name="projects" class="page" style="background-image:url('projects/project-sikkerarv.png');">
+    <section data-level="3" class="level">
+      <div data-page="0" class="page"><!-- About does not have any vertical children. --></div>
+      <div data-page="1" class="page"><!-- Technologies does not have any vertical children. --></div>
+      <div data-page="2" class="page" style="background-image:url('projects/project-sikkerarv.png');">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -323,10 +319,9 @@
           </div>
         </div>
       </div>
-
-      <div data-name="customers" class="page"><!-- Customers does not have any vertical children. --></div>
-
-      <div data-name="contact" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div data-page="3" class="page"><!-- Customers does not have any vertical children. --></div>
+      <div data-page="4" class="page"><!-- Contact does not have any vertical children. --></div>
+      <div class="clear"></div>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
