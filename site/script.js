@@ -38,6 +38,11 @@
 
   var levelBreakpoints = [];
 
+  // Define a timeout before enabling scrolling after a scroll event.
+  // Defined in ms.
+  var scrollingYTimeout = 1000;
+  var scrollingXTimeout = 50;
+
   // The current positions of the window.
   var lastScrollX = window.scrollX;
   var lastScrollY = window.scrollY;
@@ -124,7 +129,7 @@
       _scrollY(0, function () {
         // When scrolling to top is done, initialize the page scrolling to.
         _initializePage();
-        $('body').animate({ scrollLeft: positionToScrollTo }, { duration: 800, done: _scrollComplete });
+        $('body').animate({ scrollLeft: positionToScrollTo }, { duration: 800, done: function () { _scrollComplete('horizontal'); } });
       });
     }
   };
@@ -144,7 +149,7 @@
 
       _scrollY(positionToScrollTo, function () {
         currentLevel = level;
-        _scrollComplete();
+        _scrollComplete('vertical');
       }, 800);
     }
   };
@@ -168,11 +173,14 @@
    *
    * @private
    */
-  var _scrollComplete = function () {
-    lastScrollY = window.scrollY;
-    lastScrollX = window.scrollX;
-    isScrolling = false;
-    enableScroll();
+  var _scrollComplete = function (direction) {
+    var timeout = direction === 'vertical' ? scrollingYTimeout : scrollingXTimeout;
+    window.setTimeout(function () {
+      lastScrollY = window.scrollY;
+      lastScrollX = window.scrollX;
+      isScrolling = false;
+      enableScroll();
+    }, timeout);
   };
 
 
