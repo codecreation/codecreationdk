@@ -1,8 +1,8 @@
 FROM million12/nginx-php
 
-MAINTAINER Kristian Kaa <kaakristian@gmail.com>
+MAINTAINER DocIT ApS <info@docit.dk>
 
 # Copy all files.
-COPY site /data/www
+COPY site /data/www/default
 COPY config/default.conf /etc/nginx/nginx.d/default.conf
-RUN usermod -u 1000 www
+
