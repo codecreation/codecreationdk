@@ -1,3 +1,11 @@
+.level[data-level="0"] .page[data-page="0"] {
+  background-image:url('bg-about.jpg');
+}
+
+.level[data-level="0"] .page[data-page="1"] {
+  background-image:url('bg-technologies.jpg');
+}
+
 .level[data-level="1"] .page[data-page="2"] {
   background-image:url('projects/project-testaviva.jpg');
 }

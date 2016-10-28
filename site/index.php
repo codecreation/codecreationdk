@@ -35,21 +35,21 @@
     </header>
 
     <section data-level="0" class="level">
-      <div data-page="0" class="page" style="background-image:url('bg-about.jpg');">
+      <div data-page="0" class="page">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
-              <?php include('pages/about-level1.html'); ?>
+              <?php include('pages/about-level1.php'); ?>
             </div>
           </div>
         </div>
       </div>
 
-      <div data-page="1" class="page" style="background-image:url('bg-technologies.png');">
+      <div data-page="1" class="page">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
-              <?php include('pages/skills-level1.html'); ?>
+              <?php include('pages/skills-level1.php'); ?>
             </div>
           </div>
         </div>
@@ -60,6 +60,7 @@
           <div class="row">
             <div class="small-12 columns">
               <?php include('pages/projects-level1.php'); ?>
+              <?php nextProject('Testaviva.dk'); ?>
             </div>
           </div>
         </div>
