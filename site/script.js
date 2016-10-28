@@ -40,8 +40,7 @@
 
   // Define a timeout before enabling scrolling after a scroll event.
   // Defined in ms.
-  var scrollingYTimeout = 1000;
-  var scrollingXTimeout = 50;
+  var scrollingTimeout = 500;
 
   // The current positions of the window.
   var lastScrollX = window.scrollX;
@@ -174,13 +173,12 @@
    * @private
    */
   var _scrollComplete = function (direction) {
-    var timeout = direction === 'vertical' ? scrollingYTimeout : scrollingXTimeout;
     window.setTimeout(function () {
       lastScrollY = window.scrollY;
       lastScrollX = window.scrollX;
       isScrolling = false;
       enableScroll();
-    }, timeout);
+    }, scrollingTimeout);
   };
 
 
@@ -193,7 +191,7 @@
    *   Called when the scroll is done, or instantly if no scrolling is needed.
    */
   var _scrollY = function (position, callback, duration) {
-    duration = duration || 200;
+    duration = duration || 400;
     if (window.scrollY !== position) {
       // Scroll to the top deck.
       $('body').animate({ scrollTop: position }, {

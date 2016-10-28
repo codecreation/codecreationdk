@@ -1,0 +1,11 @@
+.level[data-level="1"] .page[data-page="2"] {
+  background-image:url('projects/project-testaviva.jpg');
+}
+
+.level[data-level="2"] .page[data-page="2"] {
+  background-image:url('projects/project-kontraktmaskinen.jpg');
+}
+
+.level[data-level="3"] .page[data-page="2"] {
+  background-image:url('projects/project-sikkerarv.jpg');
+}
