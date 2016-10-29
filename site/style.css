@@ -21,7 +21,7 @@ p, label {
 }
 
 header .top-bar {
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.8);
   height: 55px;
   width: 100%;
 }
@@ -143,4 +143,43 @@ section[data-level="0"] {
   .page-inner > .row {
     padding-top: 70px;
   }
+}
+.google-map {
+  min-height: 200px;
+}
+
+.contact-form button {
+  vertical-align: baseline;
+}
+
+.contact-form-message {
+  margin-left: 5px;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.contact-form-message.success {
+  color: #5da423;
+}
+
+.contact-form-message.error {
+  color: #c60f13;
+}
+
+.button {
+  min-width: 100px;
+  text-align: center;
+}
+
+.button .fa {
+  display: none;
+}
+
+.button.loading span {
+  display: none;
+}
+
+.button.loading .fa {
+  display: inline-block;
 }

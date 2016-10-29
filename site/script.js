@@ -1,17 +1,17 @@
-/*(function($, window) {
-  $(".button-collapse").sideNav();
-
+(function($, window) {
   window.contact = function (event) {
     event.preventDefault();
-
     var form = $('form[name="contact"]');
-    var messageOk = $('#contact-thanks');
-    var messageError = $('#contact-error');
+    var elementMessage = $('#contact-message');
+    var elementButton = $('#contact-form-button');
 
-    messageOk.slideUp('fast');
-    messageError.slideUp('fast');
+    elementButton.addClass('loading');
 
-    var url = "https://formspree.io/contact@docit.dk";
+    // If the element is displayed, hide it.
+    elementMessage.css('opacity', '0');
+    elementMessage.removeClass('success').removeClass('error');
+
+    var url = "https://formspree.io/kontakt@codecreation.dk";
 
     $.ajax({
       url: url,
@@ -19,16 +19,22 @@
       data: form.serializeArray(),
       dataType: "json",
       success: function () {
-        messageOk.slideDown('fast');
+        elementMessage.addClass('success');
+        elementMessage.text('Din besked er blevet sendt. Vi vender tilbage hurtigst muligt.');
         form.trigger('reset');
       },
       error: function () {
-        messageError.slideDown('fast');
+        elementMessage.addClass('error');
+        elementMessage.text('Der skete desværre en fejl. Prøv igen eller skriv til ' + elementMessage.data('email'));
       },
+      complete: function () {
+        elementButton.removeClass('loading');
+        elementMessage.css('opacity', '1');
+      }
     });
   }
 }(jQuery, window));
-*/
+
 
 (function($, window) {
   // The current page and level.
@@ -53,7 +59,7 @@
   $(function() {
     _initializeScrolling();
     // Attach event listener for the menu links.
-    $('.top-bar-link').on('click', function () {
+    $('a[data-page]').on('click', function () {
       scrollToPage($(this).data('page'));
     });
     // Attach event listener for vertical scroll button.
@@ -172,11 +178,12 @@
    *
    * @private
    */
-  var _scrollComplete = function (direction) {
+  var _scrollComplete = function () {
+    lastScrollY = window.scrollY;
+    lastScrollX = window.scrollX;
+    isScrolling = false;
+    // To prevent double scroll by fault, wait for x seconds to re-enable scrolling.
     window.setTimeout(function () {
-      lastScrollY = window.scrollY;
-      lastScrollX = window.scrollX;
-      isScrolling = false;
       enableScroll();
     }, scrollingTimeout);
   };

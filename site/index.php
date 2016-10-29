@@ -1,5 +1,8 @@
 <?php include('functions.php'); ?>
 <?php $companyName = 'Code Creation'; ?>
+<?php $companyNameFull = "$companyName IVS"; ?>
+<?php $companyNameWeb = "codecreation.dk"; ?>
+<?php $companyMail = "kontakt@codecreation.dk"; ?>
 <html xmlns="http://www.w3.org/1999/html">
   <head>
     <title><?= $companyName ?></title>
@@ -55,7 +58,7 @@
         </div>
       </div>
 
-      <div data-page="2" class="page" style="background-image:url('bg-projects.jpg');">
+      <div data-page="2" class="page">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
@@ -66,88 +69,21 @@
         </div>
       </div>
 
-      <div data-page="3" class="page" style="background-image:url('bg-customers.jpg');">
+      <div data-page="3" class="page">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
-              <div class="page-content">
-                <h3>Vores kunder</h3>
-                <div class="row">
-                  <div class="small-12 medium-6 columns">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-
-                <br /><br />
-
-                <div class="row">
-                  <div class="small-3 columns">
-                    <img src="customers/thegoodwooddk.png" width="100%" height="auto" />
-                  </div>
-                  <div class="small-9 columns">
-                    <h4>THEGOODWOOD</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-
-                <br /><br />
-
-                <div class="row">
-                  <div class="small-3 columns">
-                    <img src="customers/rapteksterdk.png" width="100%" height="auto" />
-                  </div>
-                  <div class="small-9 columns">
-                    <h4>Raptekster.dk</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div>
-                </div>
-
-              </div>
+              <?php include('pages/customers-level1.php'); ?>
             </div>
           </div>
         </div>
       </div>
 
-      <div data-page="4" class="page" style="background-image:url('bg-contact.png');">
+      <div data-page="4" class="page">
         <div class="page-inner">
           <div class="row">
             <div class="small-12 columns">
-
-              <div class="page-content">
-                <h3>Besøg os</h3>
-                <p>Du er altid velkommen forbi til en kop kaffe, te, en øl eller bare et glas vand :)</p>
-                <p>
-                  <strong>DocIT IVS</strong>
-                  <br />
-                  Kristen Bernikows gade 6, 5 sal
-                  <br />
-                  1105 København K
-                </p>
-              </div>
-
-              <div class="page-content">
-                <h3>Kontakt</h3>
-                <div class="row">
-                  <div class="small-12 medium-6 columns">
-                    <form class="col s12" name="contact" onsubmit="window.contact(event);">
-                      <label for="name">Navn
-                        <input id="name" type="text" class="validate" name="name" required>
-                      </label>
-                      <label for="email">E-mail
-                        <input id="email" type="email" class="validate" name="email" required>
-                      </label>
-                      <label for="textarea1">Indhold
-                        <textarea id="textarea1" class="materialize-textarea" name="content" required></textarea>
-                      </label>
-
-                      <button class="button" type="submit">Submit</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-
-
+              <?php include('pages/contact-level1.php'); ?>
             </div>
           </div>
         </div>
