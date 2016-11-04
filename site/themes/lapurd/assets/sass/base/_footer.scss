@@ -1,0 +1,27 @@
+#footer {
+    border-top: 1px solid $color-border;
+    font-family: $font-secondary;
+    min-height: 100px;
+    background: $color-white;
+
+    #block-copyright {
+        padding: 44px 0 30px 0;
+        text-align: center;
+
+        p {
+            color: $color-title;
+            text-transform: uppercase;
+            font-size: $fs-11;
+            // font-weight: 700;
+            font-family: $font-secondary;
+        }
+
+        a {
+            color: $color-title;
+
+            &:hover {
+                color: $color-link;
+            }
+        }
+    }
+}

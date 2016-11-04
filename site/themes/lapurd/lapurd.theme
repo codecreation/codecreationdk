@@ -1,0 +1,102 @@
+<?php
+use Drupal\Core\Template\RenderWrapper;
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+//$active_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+$active_theme = \Drupal::theme()->getActiveTheme()->getName();
+include_once(drupal_get_path('theme', $active_theme) . '/assets/includes/skins-menu/skins_menu.inc');
+function lapurd_preprocess_page(&$variables) {
+  if (!empty($variables['page']['sidebar_first'])) {
+    $classes[] = 'one-sidebar';
+    $classes[] = 'sidebar-first';
+    $variables['page']['main_content_width'] = 8;
+    $variables['page']['sidebar_first_width'] = 4;
+  }
+ skmn_preprocess_page($variables);
+  
+}
+function lapurd_preprocess_html(&$variables) {
+  $is_front_page =  \Drupal::service('path.matcher')->isFrontPage();
+  if ($is_front_page) {
+    $variables['attributes']['class'][] = 'front';
+  } else {
+    $variables['attributes']['class'][] = 'not-front';
+  }
+
+  if(isset($variables['node_type'])) {
+    $variables['attributes']['class'][] = 'node';
+    $variables['attributes']['class'][] = 'node-' . $variables['node_type'];
+  }
+  else{
+      $variables['attributes']['class'][]=$variables['root_path'];
+  }
+   skmn_preprocess_html($variables);
+}
+
+function lapurd_preprocess_breadcrumb(&$variables){
+       // kint(\Drupal::routeMatch()->getParameters()); exit;
+
+        if(($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']){
+               $variables['breadcrumb'][] = array(
+                         'text' => $node->getTitle(),
+                         'url' => $node->URL()
+                       );
+
+              }
+}
+
+function lapurd_preprocess_page_title(&$variables) {
+  if(($node = \Drupal::routeMatch()->getParameter('node')) && $variables['title']){
+        if($node->getType() == 'blog')
+          {
+            $variables['title'] = 'Blog';
+          }
+          else if($node->getType() == 'portfolio'){
+            $variables['title'] = 'Portfolio';
+          }
+       }
+}
+
+function lapurd_preprocess_menu(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}
+
+function lapurd_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'contact_message_contact_form') {
+
+    $form['name']['#attributes']['placeholder'][] = $form['name']['#title'];
+    $form['mail']['#attributes']['placeholder'][] = "Your email";
+    $form['subject']['#attributes']['placeholder'][] = "subject";
+    $form['message']['#attributes']['placeholder'][] = "Description";
+    $form['actions']['submit']['#value']->__construct("Send");
+
+    unset($form['name']['#title']);
+    unset($form['mail']['#title']);
+    unset($form['subject']['widget'][0]['value']['#title']);
+    unset($form['message']['widget'][0]['value']['#title']);
+    unset($form['field_custom_subject']['widget']['#title']);
+    unset($form['actions']['preview']);
+  }
+}
+
+/*function lapurd_preprocess_comment(&$vars) {
+  $element = $vars['elements'];
+  $comment = $element['#comment'];
+   kint($comment); exit;
+  if(array_key_exists('#entity_type', $element) && $element['#entity_type'] == 'comment') {
+    $vars['classes_array'][] = $comment->uid == 1 ? 'answer' : 'question';
+  }
+}
+*/
+function lapurd_form_system_theme_settings_alter(&$form, $form_state) {
+  
+  skmn_form_system_theme_settings_alter($form, $form_state);
+}
+
+
+function lapurd_form_system_theme_settings_submit($form, &$form_state) {
+  
+  skmn_form_system_theme_settings_submit($form, $form_state);
+}

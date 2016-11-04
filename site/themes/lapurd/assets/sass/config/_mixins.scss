@@ -1,0 +1,174 @@
+@mixin clearfix {
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin sprites {
+    background-color: transparent;
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+}
+
+@mixin nucleo {
+    display: inline-block;
+    font-family: "Nucleo Outline";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin nucleo_mini {
+    display: inline-block;
+    font-family: "Nucleo Mini";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin nucleo_glyph {
+    display: inline-block;
+    font-family: "Nucleo Glyph";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin border-radius($val...) {
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    border-radius: $val;
+}
+
+@mixin box-shadow($val...) {
+    box-shadow: $val;
+    -moz-box-shadow: $val;
+    -webkit-box-shadow: $val;
+}
+
+@mixin text-shadow($val...) {
+    text-shadow: $val;
+    -webkit-text-shadow: $val;
+}
+
+@mixin transition($val...) {
+    transition: $val;
+    -o-transition: $val;
+    -moz-transition: $val;
+    -webkit-transition: $val;
+}
+
+/* Translate */
+@mixin translate($val...) {
+    transform: translate($val);
+    -o-transform: translate($val);
+    -ms-transform: translate($val);
+    -moz-transform: translate($val);
+    -webkit-transform: translate($val);
+}
+
+@mixin translate3d($val...) {
+    -webkit-transform: translate3d($val);
+    -moz-transform: translate3d($val);
+    transform: translate3d($val);
+}
+
+@mixin scale($val...) {
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+    -o-transform: scale($val);
+    transform: scale($val);
+}
+
+@mixin scaleX($val...) {
+    -webkit-transform: scaleX($val);
+    -moz-transform: scaleX($val);
+    -o-transform: scaleX($val);
+    transform: scaleX($val);
+}
+
+@mixin scaleY($val...) {
+    -webkit-transform: scaleY($val);
+    -moz-transform: scaleY($val);
+    -o-transform: scaleY($val);
+    transform: scaleY($val);
+}
+
+@mixin rotate($val...) {
+    -ms-transform: rotate($val);
+    -webkit-transform: rotate($val);
+    transform: rotate($val);
+}
+
+@mixin transform-origin($val...) {
+    -webkit-transform-origin: inherit;
+    -moz-transform-origin: inherit;
+    -ms-transform-origin: inherit;
+    -o-transform-origin: inherit;
+    transform-origin: inherit;
+}
+
+@mixin animation($val...) {
+    -webkit-animation: $val;
+    -moz-animation: $val;
+    -o-animation: $val;
+    animation: $val;
+}
+
+@mixin placeholder($val...) {
+    &::-webkit-input-placeholder {
+        color: $val;
+    }
+
+    &:-moz-placeholder {
+        color: $val;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: $val;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $val;
+    }
+
+    &:placeholder {
+        color: $val;
+    }
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+
+    // IE8 filter
+    $opacity-ie: $opacity * 100;
+
+    filter: #{alpha(opacity = $opacity-ie)};
+}
+
+@mixin btn {
+    padding: 12px 55px;
+    background: $color-link;
+    color: $color-btn;
+    border-radius: 40px;
+    font-family: $font-tertiary;
+    font-size: $fs-12;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $color-link-hover;
+    }
+}

@@ -1,0 +1,56 @@
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+$font-body:             'gotham_bookregular';
+$font-primary:          'gotham_lightregular';
+$font-secondary:        'gotham_mediumregular';
+$font-tertiary:        	'gotham_boldregular';
+
+// Font Size
+$fs-body:               15px;
+$fs-10:					0.667em;
+$fs-11:                 0.733em;
+$fs-12:                 0.800em;
+$fs-13:                 0.867em;
+$fs-14:                 0.933em;
+$fs-15:					1em;
+$fs-16:					1.067em;
+$fs-20:					1.333em;
+$fs-25:					1.667em;
+$fs-35:					2.333em;
+
+
+// Colors
+$color-black:           #000;
+$color-white:           #fff;
+
+$color-body:            $color-black;
+$color-title:           #444444;
+$color-link:            #dab485;
+$color-link-hover:      #ffe9c4;
+$color-border:          #eaeaea;
+$color-text:			#777777;
+$color-background:		#313a41;
+$color-btn:				#313432;
+$color-background-l:	#f6f6f6;
+$color-background-b:	#131e26;
+$color-border-b:		#dddddd;
+$color-background-input:#fafafa;
+$color-icon:			#43ca9c;
+$color-border-icon:		#7b7b7b;
+$color-dotted:			#b1b1b1;
+$color-field:			#d4d4d4;
+
+
+
+// Devices
+$desktop:               1200px;
+$tablet-lg:             1199px;
+$tablet:                992px;
+$tablet-md:             991px;
+$tablet-sm:             768px;
+$mobile-lg:             767px;
+$mobile:                640px;
+$mobile-md:             480px;
+$mobile-sm:             360px;
+$mobile-xs:             320px;

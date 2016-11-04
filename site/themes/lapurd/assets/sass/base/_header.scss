@@ -1,0 +1,210 @@
+.front {
+    #header {
+        position: fixed;
+        padding-bottom: 25px;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+
+        @include transition(background 0.3s, right 0.5s ease-in-out, left 0.5s ease-in-out);
+    }
+
+    .page.scrolled #header {
+        background-color: rgba($color-background-b, 0.85);
+    }
+}
+
+#header {
+    font-family: $font-tertiary;
+    z-index: 99;
+    padding-top: 25px;
+
+    #block-lapurd-branding {
+        display: inline-block;
+        padding-top: 10px;
+
+        .site-name {
+            a {
+                color: $color-white;
+                font-size: $fs-20;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .block-menu {
+        float: right;
+
+        ul.menu {
+            li {
+                a {
+                    text-transform: uppercase;
+                    color: $color-white;
+                    font-size: $fs-12;
+                }
+            }
+        }
+    }
+
+    #block-useraccountmenu {
+        ul.menu {
+            margin-left: 0;
+            margin-bottom: 0;
+
+            li {
+                padding-top: 0;
+
+                a {
+                    @include btn;
+
+                    display: inline-block;
+
+                    // border: 1px solid $color-link;
+               
+                }
+            }
+        }
+    }
+}
+
+.not-front {
+    #header {
+        padding-bottom: 25px;
+
+        .block-menu ul.menu li a, #block-lapurd-branding .site-name a {
+            color: $color-black;
+        }
+
+        #block-useraccountmenu {
+            ul.menu li a {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #header #block-lapurd-main-menu {
+        display: inline-block;
+        padding-top: 10px;
+
+        > ul.menu {
+            margin: 0;
+
+            > li {
+                list-style: none;
+                float: left;
+                margin: 0 13px;
+                padding-top: 0;
+                position: relative;
+
+                > a {
+                    // padding: 0 15px;
+                    position: relative;
+
+                    &:before {
+                        background-color: $color-link;
+                        bottom: 0;
+                        content: "";
+                        height: 4px;
+                        left: 50%;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: auto;
+                        transform: translate(-50%, -50px);
+                        transition: width 0.3s ease 0s;
+                        width: 0;
+                    }
+                }
+
+                a.is-active {
+                    color: $color-link;
+
+                    &:before {
+                        width: 100%;
+                    }
+                }
+
+                //sub menu
+                ul.menu {
+                    display: none;
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    background: $color-background;
+                    padding: 0 15px 10px 15px;
+                    margin-left: 0;
+                    width: 220px;
+                    z-index: 200;
+
+                    &:before {
+                        content: "";
+                        border-right: 7px solid transparent;
+                        border-left: 7px solid transparent;
+                        border-bottom: 7px solid $color-background;
+                        position: absolute;
+                        top: -7px;
+                        left: 0;
+                    }
+
+                    li {
+                        a {
+                            &:hover{
+                                color: $color-link;
+                            }
+                        }
+
+                        a {
+                            color: $color-white;
+                            font-size: $fs-10;
+                        }
+                    }
+
+                    li.menu-item--active-trail {
+                        a.is-active {
+                            color: $color-link !important;
+                        }
+                    }
+                }
+
+                &:hover {
+                    ul.menu {
+                        display: block;
+                    }
+
+                    a {
+                        color: $color-link;
+
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            li.menu-item--expanded {
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
+
+.user-logged-in.front{
+    #header{
+        top: 39px;
+    }
+}
+
+.user-logged-in.front.toolbar-tray-open {
+    #header{
+        top: 80px;
+    }
+}
+
+
+
+
+
+
+
+

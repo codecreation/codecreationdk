@@ -1,0 +1,22 @@
+name: Lapurd
+type: theme
+base theme: classy
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: Core
+version: 8.1.1
+core: 8.x
+libraries:
+  - lapurd/global-styling
+regions:
+    header: Header
+    banner: Banner
+    featured: Featured
+    highlighted: Highlighted
+    content: Content
+    sidebar_first: 'Sidebar first'
+    panel_first: 'Panel first'
+    panel_second: 'Panel second'
+    panel_third: 'Panel third'
+    footer: Footer
+
+

@@ -2,8 +2,17 @@ version: '2'
 services:
   app:
     build: .
-    container_name: docit.site
+    container_name: cc.site
     ports:
       - "8083:80"
     volumes:
-      - ./site:/data/www/default
+      - "./site:/var/www/web:rw"
+      - "./config/php.ini:/etc/php/7.0/fpm/php.ini"
+  db:
+    image: mariadb:10.0.22
+    container_name: cc.db
+    environment:
+      MYSQL_DATABASE: "db_codecreation"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "pass"

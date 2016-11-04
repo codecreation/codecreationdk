@@ -1,0 +1,6 @@
+name: Menu breadcrumb
+type: module
+description: This is custom breadcrumb.
+version: VERSION
+core: 8.x
+configure: menu_breadcrumb.settings

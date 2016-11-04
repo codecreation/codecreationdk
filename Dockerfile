@@ -1,8 +1,7 @@
-FROM million12/nginx-php
+FROM tbfisher/drupal-nginx:php-7.0.x
 
-MAINTAINER DocIT ApS <info@docit.dk>
+MAINTAINER Code Creation ApS <info@codecreation.dk>
 
 # Copy all files.
-COPY site /data/www/default
-COPY config/default.conf /etc/nginx/nginx.d/default.conf
+COPY site /var/www/web
 
