@@ -1,8 +1,8 @@
-@import 'levels';
+@import 'scss/variables';
+@import 'scss/levels';
 
 html, body {
-  color: #fcfcfc;
-  /*height: 100%;*/
+  color: $color-font-black;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
@@ -17,13 +17,23 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a,
+a:hover,
+a:active,
+a:focus {
+  color: $color-font-black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 p, label {
-  color: white;
+  color: $color-font-black;
   text-align: justify
 }
 
 header .top-bar {
-  background-color: rgba(0,0,0,.8);
+  background-color: $color-transparent-box;
   height: 55px;
   width: 100%;
 }
@@ -84,7 +94,7 @@ section .clear {
 }
 
 .page-content {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: $color-transparent-box;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -134,7 +144,7 @@ section[data-level="0"] {
 @media screen and (max-width: 39.9375em) {
   #responsive-menu {
     width: calc(100% + 20px);
-    background-color: rgba(0,0,0,.7);
+    background-color: $color-transparent-box;
     margin: 11px -10px 0 -10px;
   }
 
