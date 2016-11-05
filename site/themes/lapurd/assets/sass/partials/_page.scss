@@ -154,28 +154,10 @@ nav.pager {
     display: none;
     font-size: 1.714em;
     height: 50px;
-    // @include transition(all 0.2s ease-out);
     line-height: 50px;
     position: fixed;
     right: 30px;
     text-align: center;
-    text-indent: -9999em;
     width: 50px;
     z-index: 200;
-    &:hover, &:focus {
-        background: $color-background-b;
-        color: $color-background-l;
-    }
-    &:after {
-        content: "\ea75";
-        @include nucleo;
-        left: 0;
-        line-height: 50px;
-        position: absolute;
-        text-align: center;
-        text-indent: 0;
-        top: 0;
-        width: 100%;
-        font-size: 28px;
-    }
 }

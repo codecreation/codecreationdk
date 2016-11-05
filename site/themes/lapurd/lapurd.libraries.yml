@@ -6,6 +6,7 @@ global-styling:
       assets/css/style.min.css: {}
 
   js:
+    https://use.fontawesome.com/c4f762cc3d.js: : { type: external, minified: true }
     assets/includes/bootstrap/js/bootstrap.js: {}
     assets/includes/flexslider/jquery.flexslider-min.js: {}
     assets/js/jquery.smooth-scroll.js: {}

@@ -13,7 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
  /*****************/
 gulp.task('browser-sync', function() {
   browserSync({
-    proxy: 'http://localhost:8083'
+    proxy: 'http://localhost:7888'
   });
 });
 
