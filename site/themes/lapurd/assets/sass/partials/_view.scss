@@ -60,50 +60,18 @@
                         font-size: 0;
                         color: $color-link;
                     }
+                    //
+                    //.design_code {
+                    //    &:before {
+                    //        content: "";
+                    //        background: url(../images/design-code.svg) no-repeat;
+                    //        background-size: 30px 30px;
+                    //        width: 30px;
+                    //        height: 30px;
+                    //        display: inline-block;
+                    //    }
+                    //}
 
-                    .design_code {
-                        &:before {
-                            content: "";
-                            background: url(../images/design-code.svg) no-repeat;
-                            background-size: 30px 30px;
-                            width: 30px;
-                            height: 30px;
-                            display: inline-block;
-                        }
-                    }
-
-                    .design_vector {
-                        &:before {
-                            content: "";
-                            background: url(../images/design-vector.svg) no-repeat;
-                            background-size: 30px 30px;
-                            width: 30px;
-                            height: 30px;
-                            display: inline-block;
-                        }
-                    }
-
-                    .design_window-responsive {
-                        &:before {
-                            content: "";
-                            background: url(../images/design-window-responsive.svg) no-repeat;
-                            background-size: 30px 30px;
-                            width: 30px;
-                            height: 30px;
-                            display: inline-block;
-                        }
-                    }
-
-                    .ui-3_search {
-                        &:before {
-                            content: "";
-                            background: url(../images/ui-search.svg) no-repeat;
-                            background-size: 30px 30px;
-                            width: 30px;
-                            height: 30px;
-                            display: inline-block;
-                        }
-                    }
                 }
 
                 .views-field-title {

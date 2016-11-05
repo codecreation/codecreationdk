@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g  transform="translate(0, 0)">
-<line y2="24" x2="4" y1="24" x1="22" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" stroke-linejoin="miter"/>
-<line y2="40" x2="4" y1="40" x1="22" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" stroke-linejoin="miter"/>
-<line y2="56" x2="4" y1="56" x1="42" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" stroke-linejoin="miter"/>
-<line y2="8" x2="4" y1="8" x1="42" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" stroke-linejoin="miter"/>
-<circle r="12" cy="32" cx="42" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" data-color="color-2" stroke-linejoin="miter"/>
-<line y2="40.485" x2="50.485" y1="50" x1="60" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#dab485" fill="none" data-color="color-2" stroke-linejoin="miter"/>
-</g></svg>
