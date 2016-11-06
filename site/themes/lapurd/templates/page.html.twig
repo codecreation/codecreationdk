@@ -1,9 +1,4 @@
 <div id="page" class="page" {{ page_css |raw }} >
-
-  {% if page.show_skins_menu %}
-    {{ page.show_skins_menu |raw }}
-  {% endif %}
-
   <a id="Top"></a>
   <header id="header">
     <div class="container">
@@ -15,7 +10,6 @@
 
       {% if site_name or site_slogan %}
         <div class="name-and-slogan">
-
           {# Use h1 when the content title is empty #}
           {% if title %}
             <strong class="site-name">

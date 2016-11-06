@@ -218,6 +218,8 @@
 }
 
 #block-ourlocation {
+    pointer-events: none;
+    margin-bottom: -25px;
     p {
         margin-bottom: 0;
     }
@@ -385,8 +387,21 @@
     }
 }
 
-/* .not-front #banner {
-    @media (max-width: 767px) {
-        margin-bottom: 85px;
+#block-frontpagecompetences {
+    position: relative;
+    h2, p, ul {
+        width: 50%;
     }
-} */
+    ul {
+        margin-top: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    img {
+        position: absolute;
+        width: 600px;
+        top: 0;
+        right: -100px;
+    }
+}

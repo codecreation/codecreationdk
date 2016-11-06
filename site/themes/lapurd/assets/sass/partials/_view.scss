@@ -265,64 +265,6 @@
     }
 }
 
-.view-introduction {
-    min-height: 600px;
-    background: $color-background-l;
-    padding: 110px 0 75px 0;
-    position: relative;
-
-    .view-content {
-        width: 935px;
-        margin: 0 auto;
-        padding: 0 15px;
-
-        .views-field-body {
-            // width: 50%;
-            float: left;
-
-            h1 {
-                font-family: $font-primary;
-                font-size: $fs-35;
-
-                span {
-                    color: $color-link;
-                }
-            }
-
-            ul {
-                list-style: none;
-                padding-left: 0;
-
-                li {
-                    margin-bottom: 8px;
-
-                    &:before {
-                        content: "";
-                        background: $color-link;
-                        height: 7px;
-                        width: 7px;
-                        display: inline-block;
-                        border-radius: 50%;
-                        margin-right: 15px;
-                        position: relative;
-                        top: -1px;
-                    }
-                }
-            }
-        }
-
-        .views-field-field-image {
-            position: absolute;
-            top: 85px;
-            right: 0;
-            text-align: right;
-            img{
-                width: 95%;
-            }
-        }
-    }
-}
-
 .view-faqs {
     .panel {
         padding: 10px 15px;
@@ -626,6 +568,7 @@
 }
 
 .view-portfolio {
+    padding-bottom: 20px;
     .views-row {
         margin: 0 -7px 30px -7px;
 
@@ -665,7 +608,6 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        display: block;
                         z-index: 50;
 
                         @include transition(all 0.3s ease-out);
@@ -797,6 +739,44 @@
             &:hover {
                 color: $color-link;
             }
+        }
+    }
+}
+
+.view-customers {
+    .views-row {
+        margin-bottom: 4rem;
+        position: relative;
+        cursor: pointer;
+    }
+    .views-field-field-image {
+        max-width: 270px;
+        margin-right: 20px;
+        display: inline-block;
+    }
+    .views-field-body {
+        max-width: calc(100% - 290px);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .views-field-field-link a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-indent: -99999px;
+    }
+
+    @media (max-width: 767px) {
+        .views-field-field-image {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .views-field-body {
+            width: 100%;
+            max-width: 100%;
         }
     }
 }
