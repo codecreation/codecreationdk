@@ -6,7 +6,7 @@ general:
 dependencies:
   pre:
     # Install PHP dependencies
-    - cd $HOME/codecreationdk/site && compose install
+    - cd $HOME/codecreationdk/site && composer install
 test:
   override:
     # Run one passing test.

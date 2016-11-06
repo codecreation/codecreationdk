@@ -1,18 +1,34 @@
 <?php
+require 'recipe/drupal8.php';
 
-// All Deployer recipes are based on `recipe/common.php`.
-require 'recipe/drupal7.php';
-
-// Define a server for deployment.
-// Let's name it "prod" and use port 22.
-server('prod', '46.101.170.221', 9999)
-  ->user('kka')
+server('prod', '146.185.128.63', 9999)
+  ->user('deploy')
   ->identityFile()
   ->stage('production')
-  ->env('deploy_path', '/usr/share/nginx/docitdk'); // Define the base path to deploy your project to.
+  ->env('deploy_path', '/usr/share/nginx/html/codecreationdk');
 
-// Specify the repository from which to download your project's code.
-// The server needs to have git installed for this to work.
-// If you're not using a forward agent, then the server has to be able to clone
-// your project from this repository.
-set('repository', 'git@github.com:DocIT-dk/docitdk.git');
+set('repository', 'git@github.com:DocIT-dk/codecreationdk.git');
+
+task('docker:reboot', function () {
+  cd('{{release_path}}');
+  run('docker login -e info@docit.dk -u docitdeploy -p docit!dockerhub1');
+  run('docker stop cc.site || true');
+  run('docker rm cc.site || true');
+  run('docker pull docit/codecreation');
+  run('docker-compose -f docker-compose.prod.yml up -d');
+});
+
+task('drush:updb', function () {
+  writeln("<info>Drush: Updating database</info>");
+  run('docker exec cc.site drush updb -y --root=/var/www/web');
+});
+
+task('drush:cache', function () {
+  writeln("<info>Drush: Rebuilding cache</info>");
+  run('docker exec cc.site drush cr --root=/var/www/web');
+});
+
+// Run the custom scripts.
+after('deploy', 'docker:reboot');
+after('deploy', 'drush:updb');
+after('deploy', 'drush:cache');
