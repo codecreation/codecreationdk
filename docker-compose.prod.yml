@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: docit/codecreation/
+    image: docit/codecreation
     container_name: cc.site
     ports:
       - "8083:80"
