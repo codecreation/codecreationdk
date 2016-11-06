@@ -1,0 +1,24 @@
+general:
+  branches:
+    only:
+      - master
+
+dependencies:
+  pre:
+    # Install PHP dependencies
+    - cd $HOME/codecreationdk/site && compose install
+test:
+  override:
+    # Run one passing test.
+    - echo "Pass"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      # Login to Docker hub.
+      - docker login -e info@docit.dk -u docitdeploy -p docit!dockerhub1
+
+      # Build and push the images.
+      - cd $HOME/codecreationdk && docker build -t docit/codecreation .
+      - docker push docit/codecreationdk
