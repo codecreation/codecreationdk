@@ -589,12 +589,6 @@
                         &:before {
                             display: block;
                         }
-
-                        &:after {
-                            transform: scale(1);
-
-                            @include opacity(1);
-                        }
                     }
 
                     &:before {
@@ -614,26 +608,18 @@
 
                         display: none;
                     }
-
-                    &:after {
-                        content: "";
-                        background: url(../images/zoom.png) no-repeat;
-                        height: 46px;
-                        left: 50%;
-                        position: absolute;
-                        top: 50%;
-                        margin: -23px 0 0 -23px;
-
-                        // transform: rotate(-2deg);
-                        width: 46px;
-                        z-index: 100;
-
-                        @include transition(all 0.3s ease-out);
-
-                        @include opacity(0);
-
-                        transform: scale(0.8);
-                    }
+                }
+                i {
+                    display: none;
+                    color: #dab485;
+                    position: absolute;
+                    top: calc(50% - 12.5px);
+                    left: calc(50% - 12.5px);
+                    font-size: 25px;
+                    z-index: 10001;
+                }
+                a:hover + i {
+                    display: block;
                 }
             }
 
