@@ -26,4 +26,4 @@ deployment:
 
       # Build and push the images.
       - cd $HOME/codecreationdk && docker build -t docit/codecreation .
-      - docker push docit/codecreationdk
+      - docker push docit/codecreation
