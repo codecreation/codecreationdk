@@ -1,3 +1,10 @@
+.not-front .navbar-toggle {
+    color: black;
+}
+.btn-close {
+    display: none;
+}
+
 @media (min-width: $desktop) {
     .view-hightlight-detail {
         #slider {
@@ -78,40 +85,30 @@
     }
 
     .btn-close {
+        font-size: 2rem;
         display: none;
-
-        @include border-radius(50%);
-
-        background: url("../images/btn-close.png") no-repeat center center #ccc;
-
-        @include box-shadow(0 12px 27px rgba(0, 0, 0, 0.15));
-
         cursor: pointer;
         position: absolute;
-        right: 8px;
-        top: 22px;
+        right: -260px;
+        top: 15px;
         width: 48px;
         height: 48px;
-        z-index: 999;
+        z-index: 10000;
     }
 
     .navbar-toggle {
+        color: white;
         border: none;
         display: block;
         padding: 0;
         margin-left: 15px;
         margin-top: 13px;
         border-radius: 0;
-        .icon-bar {
-            background: $color-link;
-        }
+        font-size: 2rem;
 
         &:hover, &:focus {
             background: none;
 
-            .icon-bar {
-                background: $color-link-hover;
-            }
         }
     }
 

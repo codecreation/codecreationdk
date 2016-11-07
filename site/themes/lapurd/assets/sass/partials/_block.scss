@@ -39,7 +39,6 @@
 }
 
 #block-headeradvantage {
-    z-index: 111;
     text-align: center;
     padding-bottom: 60px;
     border-bottom: 1px solid $color-border;
@@ -54,8 +53,7 @@
     h1 img {
         margin-bottom: 25px;
         max-width: 440px;
-        // opacity: 1;
-   
+        width: 50%;
     }
 
     h1 {
@@ -403,5 +401,15 @@
         width: 600px;
         top: 0;
         right: -100px;
+    }
+    @media (max-width: 767px) {
+        h2, p, ul {
+            width: 100%;
+        }
+        img {
+            position: relative;
+            width: 100%;
+            right: 0;
+        }
     }
 }

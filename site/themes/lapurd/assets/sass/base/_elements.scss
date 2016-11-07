@@ -1,8 +1,5 @@
-//form---------------
+
 .contact-message-form {
-    // padding-right: 30px;
-    // width: 50%;
-    // float: left;
     margin-bottom: 30px;
 
     textarea {
@@ -14,6 +11,7 @@
     }
 
     input {
+        max-width: 100%;
         &:focus {
             border: 1px solid $color-title;
         }
