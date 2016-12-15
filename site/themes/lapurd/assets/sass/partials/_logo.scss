@@ -1,0 +1,18 @@
+body:not(.front) {
+  .block-system-branding-block a {
+    width: 200px;
+    height: 42px;
+    display: block;
+    background-image: url('/themes/lapurd/assets/images/code-creation-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (max-width: 992px) {
+      margin-top: 8px;
+      width: 150px;
+    }
+  }
+
+  .block-system-branding-block img {
+    display: none;
+  }
+}

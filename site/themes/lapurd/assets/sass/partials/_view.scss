@@ -729,23 +729,31 @@
     }
 }
 
-.view-customers {
+.view-customers,
+.view-jobs {
     .views-row {
         margin-bottom: 4rem;
         position: relative;
         cursor: pointer;
     }
     .views-field-field-image {
-        max-width: 270px;
         margin-right: 20px;
         display: inline-block;
+        img {
+            max-width: 270px;
+            max-height: 130px;
+            width: auto;
+            height: auto;
+        }
     }
     .views-field-body {
         max-width: calc(100% - 290px);
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
+        margin-top: 1rem;
     }
-    .views-field-field-link a {
+    .views-field-field-link a,
+    .views-field-view-node a {
         position: absolute;
         top: 0;
         left: 0;
